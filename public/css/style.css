@@ -1,0 +1,17 @@
+/* Enlever les flèches des inputs type number */
+/* Chrome, Brave, Edge, Chromium */
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]::-moz-inner-spin-button,
+input[type=number]::-moz-outer-spin-button {
+    display: none;
+} */
+
+/* Safari (optionnel mais parfois utile) */
+/* input[type="number"] {
+    appearance: textfield;
+} */
