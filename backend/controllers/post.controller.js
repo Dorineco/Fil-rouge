@@ -1,7 +1,7 @@
 import postDAO from "../dao/post.dao.js";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.SECRET_KEY;
 
 // ============================
 // CREATE POST
@@ -11,11 +11,11 @@ export const createPost = async (req, res) => {
         const { title, content } = req.body;
 
         // Récupération de l'auteur depuis le token
-        const token = req.headers.authorization?.split(" ")[1];
-        if (!token) return res.status(401).json({ message: "Token manquant" });
+        // const token = req.headers.authorization?.split(" ")[1];
+        // if (!token) return res.status(401).json({ message: "Token manquant" });
 
-        const decoded = jwt.verify(token, JWT_SECRET);
-        const author = decoded.id;
+        // const decoded = jwt.verify(token, JWT_SECRET);
+        const author = req.user.id;
 
         const post = await postDAO.create({ title, content, author });
 
