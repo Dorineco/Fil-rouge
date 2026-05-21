@@ -38,7 +38,7 @@ o description des fonctionnalités du TP
 Alertes investissement
 L’utilisateur saisit une action (ex. AAPL, TSLA, CAC40...)
 Il définit un prix d’achat/vente souhaité
-Le site surveille le cours (via une API boursière type Yahoo Finance API, Alpha Vantage ou Finnhub)
+Le site surveille le cours (via une API boursière Yahoo Finance API)
 Envoi d’un mail ou d’une notification quand la condition est remplie
 
 Calculateur d’investissement
